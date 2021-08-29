@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.ListInfo {
+  background-image: url("fonImgList.jpg");
+}
