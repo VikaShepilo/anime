@@ -1,34 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import InfoList from './InfoList'
+import Loader from './Loader'
 
-export class InfoСharacter extends React.Component {
-    state = {
-    arr: [],
+export function InfoСharacter() {
+    const [info, setInfo] = useState([]) // изменить назв. 5 6 7
+    const [isLoading, setIsLoading] = useState(true)
+
+    const sortName = () => {
+        console.log("0")
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3000/posts')
+    useEffect(() => {
+        fetch('/characters')
             .then(result => result.json())
-            .then(result => {
-                this.setState({
-                    arr: result,
-                })
-            })
-    }
+            .then(
+                (result) => {
+                    setInfo(result)
+                    setIsLoading(false)
+                }
+    )}, [])
 
-    render() {
-        return (
-            <div >
-            {
-                this.state.arr.map(e => (
-                    <div class = "ListInfo" kew = {e.id}>
-                        <img src={e.img} alt={e.character} width="210" height="260" />
-                        {' '}
-                        {'Персонаж: '}{e.character}
-                    </div>
-                ))
+    return(
+        <div>
+            { isLoading ? <Loader /> : <InfoList info={info} sortName={sortName} />
             }
-            </div>
-        );
-    }
+        </div>
+    );
 }
 //json-server --watch db.json
