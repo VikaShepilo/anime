@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Loader = () => {
+const LoaderHomePage = () => {
     return (
         <div>
             <img src="/img/loader.gif" alt="loading"/>
@@ -8,4 +8,4 @@ const Loader = () => {
     );
 }
 
-export default Loader
+export default LoaderHomePage
