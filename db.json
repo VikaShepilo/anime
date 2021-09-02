@@ -6,140 +6,161 @@
       "characterName": "Наруто Узумаки",
       "technique": 90,
       "specification": "Главный герой истории, подросток-ниндзя, в теле которого его отец, жертвуя своей жизнью, заточил огромного Девятихвостого Демона-Лиса, напавшего на селение.",
-      "img": "/img/naruto.jpg"
+      "img": "/img/naruto.jpg",
+      "evil": 0
     },
     {
       "id": 2,
       "characterName": "Саске Учиха",
       "technique": 65,
       "specification": "Один из главных персонажей, гений сильнейшего, но уничтоженного клана Учиха.",
-      "img": "/img/sasce.jpg"
+      "img": "/img/sasce.jpg",
+      "evil": 0
     },
     {
       "id": 3,
       "characterName": "Сакура Харуно",
       "technique": 12,
       "specification": "Одна из учениц академии, по уши влюбленная в Саске.",
-      "img": "/img/sacura.jpg"
+      "img": "/img/sacura.jpg",
+      "evil": 0
     },
     {
       "id": 4,
       "characterName": "Какаши Хатаке",
       "technique": 49,
       "specification": "Один из самых сильных ниндзя Конохи, а также учитель и наставник команды № 7.",
-      "img": "/img/kakashi.jpg"
+      "img": "/img/kakashi.jpg",
+      "evil": 0
     },
     {
       "id": 5,
       "characterName": "Орочимару",
       "technique": 45,
       "specification": "Один из главных антагонистов сериала, змеиный ниндзя, воплощение образа безнравственного ученого.",
-      "img": "/img/orochimaru.jpg"
+      "img": "/img/orochimaru.jpg",
+      "evil": 1
     },
     {
       "id": 6,
       "characterName": "Кабуто Якуши",
       "technique": 35,
       "specification": "Правая рука и шпион Орочимару.",
-      "img": "/img/kabuto.jpg"
+      "img": "/img/kabuto.jpg",
+      "evil": 1
     },
     {
       "id": 7,
       "characterName": "Итачи Учиха",
       "technique": 24,
       "specification": "Гений сильнейшего, но вырезанного им же клана, Учиха.",
-      "img": "/img/itachi.jpg"
+      "img": "/img/itachi.jpg",
+      "evil": 1
+      
     },
     {
       "id": 8,
       "characterName": "Джирайя",
       "technique": 33,
       "specification": "Был одним из трех легендарных ниндзя вместе с Цунаде и Орочимару и учеником третьего Хокаге.",
-      "img": "/img/dziraia.jpg"
+      "img": "/img/dziraia.jpg",
+      "evil": 0
     },
     {
       "id": 9,
       "characterName": "Хирузен Сарутоби",
       "technique": 15,
       "specification": "Третий Хокаге, предводитель деревни Скрытого Листа, бывший студент первого и второго Хокаге.",
-      "img": "/img/xiruzen.jpg"
+      "img": "/img/xiruzen.jpg",
+      "evil": 0
     },
     {
       "id": 10,
       "characterName": "Цунаде",
       "technique": 17,
       "specification": "Одна из лучших ниндзя-медиков, ученица Третьего Хокаге.",
-      "img": "/img/tsunade.jpg"
+      "img": "/img/tsunade.jpg",
+      "evil": 0
     },
     {
       "id": 11,
       "characterName": "Хината Хьюга",
       "technique": 13,
       "specification": "Наследница клана Хьюга, единственная девушка, влюбленная в Наруто Узумаки.",
-      "img": "/img/xinata.jpg"
+      "img": "/img/xinata.jpg",
+      "evil": 0
     },
     {
       "id": 12,
       "characterName": "Киба Инузука",
       "technique": 9,
       "specification": "Член Команды №8, никогда не был замечен без его пожизненного компаньона, пса Акамару.",
-      "img": "/img/kiba.jpg"
+      "img": "/img/kiba.jpg",
+      "evil": 0
     },
     {
       "id": 13,
       "characterName": "Шино Абураме",
       "technique": 14,
       "specification": "Член одного из сильных кланов, Абураме. Является членом команды Куренай.",
-      "img": "/img/shino.jpg"
+      "img": "/img/shino.jpg",
+      "evil": 0
     },
     {
       "id": 14,
       "characterName": "Ино Яманака",
       "technique": 10,
       "specification": "Специалист по техникам, контролирующих разум противника. В составе Команды № 10 тренировалась у Асумы Сарутоби.",
-      "img": "/img/ino.jpg"
+      "img": "/img/ino.jpg",
+      "evil": 0
     },
     {
       "id": 15,
       "characterName": "Чоуджи Акимичи",
       "technique": 12,
       "specification": "Член команды № 10, лучший друг Шикамару.",
-      "img": "/img/choudzi.jpg"
+      "img": "/img/choudzi.jpg",
+      "evil": 0
     },
     {
       "id": 16,
       "characterName": "Шикамару Нара",
       "technique": 9,
       "specification": "Самый ленивый, но и самый умный персонаж манги и аниме Наруто. Член самого умного клана в деревне Скрытого листа, Нара.",
-      "img": "/img/shikamaru.jpg"
+      "img": "/img/shikamaru.jpg",
+      "evil": 0
     },
     {
       "id": 17,
       "characterName": "Майто Гай",
       "technique": 27,
       "specification": "Один из джонинов деревни Скрытого Листа. Наставник Рок Ли, Неджи и Тен-Тен.",
-      "img": "/img/gai.jpg"
+      "img": "/img/gai.jpg",
+      "evil": 0
     },
     {
       "id": 18,
       "characterName": "Неджи Хьюга",
       "technique": 11,
       "specification": "Гений самого старинного и выдающегося клана, Хьюга, член команды Гая.",
-      "img": "/img/nedzi.jpg"
+      "img": "/img/nedzi.jpg",
+      "evil": 0
     },
     {
       "id": 19,
       "characterName": "Рок Ли",
       "technique": 21,
       "specification": "Один из самых трудолюбивых персонажей, техничный воин и яркая личность.",
-      "img": "/img/rok.jpg"
+      "img": "/img/rok.jpg",
+      "evil": 0
     },
     {
       "id": 20,
       "characterName": "Темари",
       "technique": 10,
       "specification": "Старшая сестра Гаары и Канкуро, ниндзя Деревни Песка.",
-      "img": "/img/temari.jpg"
+      "img": "/img/temari.jpg",
+      "evil": 0
     }
   ]
 }

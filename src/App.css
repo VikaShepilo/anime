@@ -36,4 +36,22 @@
     transform: rotate(360deg);
   }
 }
-
+.conteinetTableAndFilter {
+  width: 100%;
+}
+.characterInformationAndFilter {
+  display: flex;
+  justify-content: center;
+}
+.tableCharacterInformation {
+  width: 60%;
+}
+.buttoСhangeling {
+  width: 10rem;
+  height: 10rem;
+}
+.radioEvil {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
