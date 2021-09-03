@@ -7,14 +7,13 @@ export function HomePage() {
     const [characterInformation, setCharacterInformation] = useState([]) 
     const [filterInfo, setFilterInfo] = useState('/characters') 
     const [searchStr, setSearchStr] = useState("")
+    const [searchArr, setSearchArr] = useState([])
     const [sortedField, setSortedField] = useState(true);
 
     const handleChangeStr = (str) => { 
         setSearchStr(str.target.value)
-        const search = characterInformation.filter((val) => {
-            if (searchStr === "") {
-                return val
-            } else if (val.characterName.toLowerCase().includes(searchStr.toLowerCase())) {
+        const search = searchArr.filter((val) => {
+             if (val.characterName.toLowerCase().includes(searchStr.toLowerCase())) {
                 return val
             }
             return false
@@ -46,6 +45,7 @@ export function HomePage() {
             .then(
                 (resultArr) => {
                     setCharacterInformation(resultArr)
+                    setSearchArr(resultArr)
                     setIsLoadingTableСharacters(false)
                 }
         )}, [filterInfo])
