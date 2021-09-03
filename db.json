@@ -7,7 +7,7 @@
       "technique": 90,
       "specification": "Главный герой истории, подросток-ниндзя, в теле которого его отец, жертвуя своей жизнью, заточил огромного Девятихвостого Демона-Лиса, напавшего на селение.",
       "img": "/img/naruto.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "technique": 65,
       "specification": "Один из главных персонажей, гений сильнейшего, но уничтоженного клана Учиха.",
       "img": "/img/sasce.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 3,
@@ -23,7 +23,7 @@
       "technique": 12,
       "specification": "Одна из учениц академии, по уши влюбленная в Саске.",
       "img": "/img/sacura.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "technique": 49,
       "specification": "Один из самых сильных ниндзя Конохи, а также учитель и наставник команды № 7.",
       "img": "/img/kakashi.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "technique": 45,
       "specification": "Один из главных антагонистов сериала, змеиный ниндзя, воплощение образа безнравственного ученого.",
       "img": "/img/orochimaru.jpg",
-      "evil": 1
+      "evil": true
     },
     {
       "id": 6,
@@ -47,7 +47,7 @@
       "technique": 35,
       "specification": "Правая рука и шпион Орочимару.",
       "img": "/img/kabuto.jpg",
-      "evil": 1
+      "evil": true
     },
     {
       "id": 7,
@@ -55,7 +55,7 @@
       "technique": 24,
       "specification": "Гений сильнейшего, но вырезанного им же клана, Учиха.",
       "img": "/img/itachi.jpg",
-      "evil": 1
+      "evil": true
       
     },
     {
@@ -64,7 +64,7 @@
       "technique": 33,
       "specification": "Был одним из трех легендарных ниндзя вместе с Цунаде и Орочимару и учеником третьего Хокаге.",
       "img": "/img/dziraia.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 9,
@@ -72,7 +72,7 @@
       "technique": 15,
       "specification": "Третий Хокаге, предводитель деревни Скрытого Листа, бывший студент первого и второго Хокаге.",
       "img": "/img/xiruzen.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 10,
@@ -80,7 +80,7 @@
       "technique": 17,
       "specification": "Одна из лучших ниндзя-медиков, ученица Третьего Хокаге.",
       "img": "/img/tsunade.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 11,
@@ -88,7 +88,7 @@
       "technique": 13,
       "specification": "Наследница клана Хьюга, единственная девушка, влюбленная в Наруто Узумаки.",
       "img": "/img/xinata.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 12,
@@ -96,7 +96,7 @@
       "technique": 9,
       "specification": "Член Команды №8, никогда не был замечен без его пожизненного компаньона, пса Акамару.",
       "img": "/img/kiba.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 13,
@@ -104,7 +104,7 @@
       "technique": 14,
       "specification": "Член одного из сильных кланов, Абураме. Является членом команды Куренай.",
       "img": "/img/shino.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 14,
@@ -112,7 +112,7 @@
       "technique": 10,
       "specification": "Специалист по техникам, контролирующих разум противника. В составе Команды № 10 тренировалась у Асумы Сарутоби.",
       "img": "/img/ino.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 15,
@@ -120,7 +120,7 @@
       "technique": 12,
       "specification": "Член команды № 10, лучший друг Шикамару.",
       "img": "/img/choudzi.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 16,
@@ -128,7 +128,7 @@
       "technique": 9,
       "specification": "Самый ленивый, но и самый умный персонаж манги и аниме Наруто. Член самого умного клана в деревне Скрытого листа, Нара.",
       "img": "/img/shikamaru.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 17,
@@ -136,7 +136,7 @@
       "technique": 27,
       "specification": "Один из джонинов деревни Скрытого Листа. Наставник Рок Ли, Неджи и Тен-Тен.",
       "img": "/img/gai.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 18,
@@ -144,7 +144,7 @@
       "technique": 11,
       "specification": "Гений самого старинного и выдающегося клана, Хьюга, член команды Гая.",
       "img": "/img/nedzi.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 19,
@@ -152,7 +152,7 @@
       "technique": 21,
       "specification": "Один из самых трудолюбивых персонажей, техничный воин и яркая личность.",
       "img": "/img/rok.jpg",
-      "evil": 0
+      "evil": false
     },
     {
       "id": 20,
@@ -160,7 +160,7 @@
       "technique": 10,
       "specification": "Старшая сестра Гаары и Канкуро, ниндзя Деревни Песка.",
       "img": "/img/temari.jpg",
-      "evil": 0
+      "evil": false
     }
   ]
 }

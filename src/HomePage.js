@@ -2,63 +2,66 @@ import React, { useEffect, useState } from 'react'
 import CharacterTables from './CharacterTables'
 import LoaderHomePage from './LoaderHomePage'
 
-let copyArrCharacters = []
-
 export function HomePage() {
-    const [characterInformation, setCharacterInformation] = useState([]) 
     const [isLoadingTableСharacters, setIsLoadingTableСharacters] = useState(true)
+    const [characterInformation, setCharacterInformation] = useState([]) 
+    const [filterInfo, setFilterInfo] = useState('/characters') 
+    const [searchStr, setSearchStr] = useState("")
+    const [sortedField, setSortedField] = useState(true);
 
-    const radioEvilCharacters = (characterKeyEvil) => {
-        const resultArrEvilCharacters = copyArrCharacters.filter((newArrCharacters) => { 
-            return newArrCharacters[characterKeyEvil] === 1
-        })
-        setCharacterInformation(resultArrEvilCharacters)
+    const handleChangeStr = (str) => { 
+        setSearchStr(str.target.value)
+        console.log(searchStr)
     }
 
-    const radioNotEvilCharacters = (characterKeyEvil) => {
-        const resultArrNotEvilCharacters = copyArrCharacters.filter((newArrCharacters) => { 
-            return newArrCharacters[characterKeyEvil] === 0
-        })
-        setCharacterInformation(resultArrNotEvilCharacters)
-    }
-
-    const radioAllCharacters = () => {
-        setCharacterInformation(copyArrCharacters)
-    }
+    const filterEvilCharacters = () => {setFilterInfo('/characters?evil=true')}
+    const filterGoodCharacters = () => {setFilterInfo('/characters?evil=false')}
+    const filterAllCharacters = () => {setFilterInfo('/characters')}
     
-    const sortCharactersInformation = (characterKey) => {
-        const newArr = characterInformation.concat() 
-        const sortArrFromTechnique = newArr.sort(function(a,b){
-            if (a[characterKey] < b[characterKey]) return -1 
-            if (a[characterKey] > b[characterKey]) return 1 
-            return 0
+    const sortCharactersInformation = (kew) => {
+            const sortArr = characterInformation.sort((a, b) => {
+              if (a[kew] < b[kew]) {
+                return sortedField === true ? -1 : 1
+              }
+              if (a[kew] > b[kew]) {
+                return sortedField === true ? 1 : -1
+              }
+              return 0
             })
-        setCharacterInformation(sortArrFromTechnique) 
-    }
+        setSortedField(!sortedField)
+        setCharacterInformation(sortArr)
+        }
+        // const newArr = characterInformation.concat() 
+        // const sortArr = newArr.sort((a, b) => {
+        //     if (a[characterKey] < b[characterKey]) {}return -1 
+        //     if (a[characterKey] > b[characterKey]) return 1 
+        //     return 0
+        // })
+        // setCharacterInformation(sortArr) 
+
 
     useEffect(() => {
-        fetch('/characters')
-            .then(result => result.json())
-            .then(
-                (result) => {
-                    copyArrCharacters = result
-                    setCharacterInformation(result)
-                    setIsLoadingTableСharacters(false)
-                }
-    )}, [])
+            fetch(filterInfo)
+                .then(resultArr => resultArr.json())
+                .then(
+                    (resultArr) => {
+                        setCharacterInformation(resultArr)
+                        setIsLoadingTableСharacters(false)
+                    }
+        )}, [filterInfo])
 
-    return(
+    return (
         <div>
             { 
             isLoadingTableСharacters ? <LoaderHomePage /> : <CharacterTables 
                 characterInformation={characterInformation} 
                 sortCharactersInformation={sortCharactersInformation}
-                radioEvilCharacters={radioEvilCharacters} 
-                radioNotEvilCharacters={radioNotEvilCharacters}
-                radioAllCharacters={radioAllCharacters}
+                filterEvilCharacters={filterEvilCharacters} 
+                filterGoodCharacters={filterGoodCharacters}
+                filterAllCharacters={filterAllCharacters}
+                handleChangeStr={handleChangeStr}
                 />
             }
-            
         </div>
     );
 }
