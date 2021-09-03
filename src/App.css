@@ -45,6 +45,7 @@
 }
 .tableCharacterInformation {
   width: 60%;
+  cursor: pointer;
 }
 .buttoСhangeling {
   width: 10rem;

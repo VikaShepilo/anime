@@ -11,7 +11,15 @@ export function HomePage() {
 
     const handleChangeStr = (str) => { 
         setSearchStr(str.target.value)
-        console.log(searchStr)
+        const search = characterInformation.filter((val) => {
+            if (searchStr === "") {
+                return val
+            } else if (val.characterName.toLowerCase().includes(searchStr.toLowerCase())) {
+                return val
+            }
+            return false
+        })
+        setCharacterInformation(search)
     }
 
     const filterEvilCharacters = () => {setFilterInfo('/characters?evil=true')}
@@ -19,35 +27,27 @@ export function HomePage() {
     const filterAllCharacters = () => {setFilterInfo('/characters')}
     
     const sortCharactersInformation = (kew) => {
-            const sortArr = characterInformation.sort((a, b) => {
-              if (a[kew] < b[kew]) {
+        const sortArr = characterInformation.sort((a, b) => {
+            if (a[kew] < b[kew]) {
                 return sortedField === true ? -1 : 1
-              }
-              if (a[kew] > b[kew]) {
+            }
+            if (a[kew] > b[kew]) {
                 return sortedField === true ? 1 : -1
-              }
-              return 0
-            })
+            }
+            return 0
+        })
         setSortedField(!sortedField)
         setCharacterInformation(sortArr)
         }
-        // const newArr = characterInformation.concat() 
-        // const sortArr = newArr.sort((a, b) => {
-        //     if (a[characterKey] < b[characterKey]) {}return -1 
-        //     if (a[characterKey] > b[characterKey]) return 1 
-        //     return 0
-        // })
-        // setCharacterInformation(sortArr) 
-
 
     useEffect(() => {
-            fetch(filterInfo)
-                .then(resultArr => resultArr.json())
-                .then(
-                    (resultArr) => {
-                        setCharacterInformation(resultArr)
-                        setIsLoadingTableСharacters(false)
-                    }
+        fetch(filterInfo)
+            .then(resultArr => resultArr.json())
+            .then(
+                (resultArr) => {
+                    setCharacterInformation(resultArr)
+                    setIsLoadingTableСharacters(false)
+                }
         )}, [filterInfo])
 
     return (
@@ -60,6 +60,7 @@ export function HomePage() {
                 filterGoodCharacters={filterGoodCharacters}
                 filterAllCharacters={filterAllCharacters}
                 handleChangeStr={handleChangeStr}
+                searchStr={searchStr}
                 />
             }
         </div>

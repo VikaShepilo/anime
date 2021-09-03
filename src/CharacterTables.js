@@ -4,19 +4,23 @@ const CharacterTables = (props) => {
     
     return (
         <div className="conteinetTableAndFilter">
-            <input type="text" onChange={props.handleChangeStr} />
+            <input type="text" value={props.searchStr} onChange={props.handleChangeStr} />
             <div className="characterInformationAndFilter">
                 <table className="tableCharacterInformation">
                     <thead>
                         <tr>
-                            <th>Персонаж</th>
+                            <th onClick={() => {props.sortCharactersInformation('id')}}>
+                                Персонаж
+                            </th>
                             <th onClick={() => {props.sortCharactersInformation('characterName')}}>
                                 Имя
                             </th>
                             <th onClick={() => {props.sortCharactersInformation('technique')}}>
                                 Количество изученных техник
                             </th>
-                            <th>Описание</th>
+                            <th onClick={() => {props.sortCharactersInformation('specification')}}>
+                                Описание
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
