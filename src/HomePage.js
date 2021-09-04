@@ -5,62 +5,61 @@ import LoaderHomePage from './LoaderHomePage'
 export function HomePage() {
     const [isLoadingTableСharacters, setIsLoadingTableСharacters] = useState(true)
     const [characterInformation, setCharacterInformation] = useState([]) 
-    const [filterInfo, setFilterInfo] = useState('/characters') 
-    const [searchStr, setSearchStr] = useState("")
-    const [searchArr, setSearchArr] = useState([])
-    const [sortedField, setSortedField] = useState(true);
+    const [searchCharacter, setSearchCharacter] = useState({
+        characterName: '',
+        order: "asc",
+        sort: '',
+        filter: '',
+    }) 
 
-    const handleChangeStr = (str) => { 
-        setSearchStr(str.target.value)
-        const search = searchArr.filter((val) => {
-             if (val.characterName.toLowerCase().includes(searchStr.toLowerCase())) {
-                return val
-            }
-            return false
-        })
-        setCharacterInformation(search)
+    const onSortCharacters = (sortKey, element) => {
+            setSearchCharacter(searchCharacter => ({
+                ...searchCharacter,
+                sort: sortKey,
+                order: element ? 'asc' : 'desc'
+            }))  
     }
 
-    const filterEvilCharacters = () => {setFilterInfo('/characters?evil=true')}
-    const filterGoodCharacters = () => {setFilterInfo('/characters?evil=false')}
-    const filterAllCharacters = () => {setFilterInfo('/characters')}
+    const onFilterCharacters = element => {
+        setSearchCharacter(searchCharacter => ({
+            ...searchCharacter,
+            filter: element,
+        })) 
+    }
     
-    const sortCharactersInformation = (kew) => {
-        const sortArr = characterInformation.sort((a, b) => {
-            if (a[kew] < b[kew]) {
-                return sortedField === true ? -1 : 1
-            }
-            if (a[kew] > b[kew]) {
-                return sortedField === true ? 1 : -1
-            }
-            return 0
-        })
-        setSortedField(!sortedField)
-        setCharacterInformation(sortArr)
-        }
+    const onSearchName = element => {
+        setSearchCharacter(searchCharacter => ({
+            ...searchCharacter,
+            characterName: element.target.value,
+        }))
+    }
 
     useEffect(() => {
-        fetch(filterInfo)
+        const {
+            characterName,
+            order,
+            sort,
+            filter
+        } = searchCharacter
+        const url = `/characters?evil_like=${filter}&characterName_like=${characterName}&_order=${order}&_sort=${sort}`
+        
+        fetch(url)
             .then(resultArr => resultArr.json())
             .then(
                 (resultArr) => {
                     setCharacterInformation(resultArr)
-                    setSearchArr(resultArr)
                     setIsLoadingTableСharacters(false)
                 }
-        )}, [filterInfo])
+        )}, [searchCharacter])
 
     return (
         <div>
             { 
             isLoadingTableСharacters ? <LoaderHomePage /> : <CharacterTables 
                 characterInformation={characterInformation} 
-                sortCharactersInformation={sortCharactersInformation}
-                filterEvilCharacters={filterEvilCharacters} 
-                filterGoodCharacters={filterGoodCharacters}
-                filterAllCharacters={filterAllCharacters}
-                handleChangeStr={handleChangeStr}
-                searchStr={searchStr}
+                onFilterCharacters={onFilterCharacters}
+                onSortCharacters={onSortCharacters}
+                onSearchName={onSearchName}
                 />
             }
         </div>

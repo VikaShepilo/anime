@@ -3,24 +3,75 @@ import React from 'react'
 const CharacterTables = (props) => {
     
     return (
-        <div className="conteinetTableAndFilter">
-            <input type="text" value={props.searchStr} onChange={props.handleChangeStr} />
-            <div className="characterInformationAndFilter">
-                <table className="tableCharacterInformation">
+        <div>
+            <input 
+                type="text" 
+                value={props.searchCharacter} 
+                onChange={props.onSearchName} 
+            />
+                <div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="sortNamesCharacter" 
+                        onChange={() => {props.onSortCharacters('characterName', true)}} /> 
+                            В алфавитном порядке
+                    </div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="sortNamesCharacter" 
+                        onChange={() => {props.onSortCharacters('characterName', false)}} /> 
+                            В обратном
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="sortTechniqueCharacters" 
+                        onChange={() => {props.onSortCharacters('technique', true)}} /> 
+                            MIN техник
+                    </div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="sortTechniqueCharacters" 
+                        onChange={() => {props.onSortCharacters('technique', false)}} /> 
+                            MAX техник
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="filterOnEvil" 
+                        onChange={() => {props.onFilterCharacters('true||false')}} /> 
+                            Все персонажи
+                    </div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="filterOnEvil" 
+                        onChange={() => {props.onFilterCharacters('false')}} /> 
+                            На стороне добра
+                    </div>
+                    <div>
+                        <input 
+                        type="radio" 
+                        name="filterOnEvil" 
+                        onChange={() => {props.onFilterCharacters('true')}} /> 
+                            На стороне зла
+                    </div>
+                </div>
+            <div>
+                <table>
                     <thead>
                         <tr>
-                            <th onClick={() => {props.sortCharactersInformation('id')}}>
-                                Персонаж
-                            </th>
-                            <th onClick={() => {props.sortCharactersInformation('characterName')}}>
-                                Имя
-                            </th>
-                            <th onClick={() => {props.sortCharactersInformation('technique')}}>
-                                Количество изученных техник
-                            </th>
-                            <th onClick={() => {props.sortCharactersInformation('specification')}}>
-                                Описание
-                            </th>
+                            <th>Персонаж</th>
+                            <th>Имя</th>
+                            <th>Количество изученных техник</th>
+                            <th>Описание</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,34 +89,6 @@ const CharacterTables = (props) => {
                         ))}
                     </tbody>
                 </table>
-                <div>
-                    <div className="radioEvil">
-                        <div>
-                            <input 
-                            type="radio" 
-                            id="contactChoice1" 
-                            name="contact"  
-                            onChange={() => {props.filterAllCharacters()}} /> 
-                                Все персонажи
-                        </div>
-                        <div>
-                            <input 
-                            type="radio" 
-                            id="contactChoice2" 
-                            name="contact" 
-                            onChange={() => {props.filterGoodCharacters()}} /> 
-                                На стороне добра
-                        </div>
-                        <div>
-                            <input 
-                            type="radio" 
-                            id="contactChoice3" 
-                            name="contact" 
-                            onChange={() => {props.filterEvilCharacters()}} /> 
-                                На стороне зла
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );
