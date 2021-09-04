@@ -1,1 +1,17 @@
-
+.container {
+    background: url(../src/fonImgList.jpg);
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contant { 
+    min-height: 100vh;
+    max-width: 50%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+.inputForSearchName {
+    max-width: 20%;
+}
