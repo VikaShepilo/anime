@@ -1,6 +1,6 @@
 .container {
     background: url(../src/fonImgList.jpg);
-    background-position: left bottom;
+    background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

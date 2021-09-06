@@ -2,6 +2,7 @@ import React from 'react'
 import { Input, Table, Radio } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.css'
+import { Link } from "react-router-dom"
 
 const columns = [
     {
@@ -12,16 +13,32 @@ const columns = [
     {
         title: 'Имя',
         dataIndex: 'characterName',
+        dataId: 'id',
+        render: (dataIndex, dataId) => {
+            return (
+              <Link to={{
+                pathname: "/card",
+                propsSearch: {dataId}
+            }}> {dataIndex}
+              </Link>
+            )
+        }
     },
     {
         title: 'Количество изученных техник',
         dataIndex: 'technique',
+        dataId: 'id',
+        render: (dataIndex, dataId) => {
+            return (
+              <Link to={{
+                pathname: "/card",
+                propsSearch: {dataId}
+            }}> {dataIndex}
+              </Link>
+            )
+        }
     },
-    {
-      title: '',
-      dataIndex: '',
-    },
-  ]
+]
 
 const CharacterTables = (props) => {
     return (
@@ -54,7 +71,16 @@ const CharacterTables = (props) => {
                         <Radio.Button onChange={() => {props.onFilterCharacters('true')}} value="c">На стороне зла</Radio.Button>
                     </Radio.Group>
                 </div> 
-                <Table columns={columns} dataSource={props.characterInformation} rowKey="id" pagination={false} />
+                <Table columns={columns} 
+                    dataSource={props.characterInformation} 
+                    rowKey="id" 
+                    pagination={false}
+                    // onRow={(record, rowIndex) => {
+                    //     return {
+                    //         onClick: event => {},
+                    //     };
+                    //   }}
+                />
             </div>
         </div>
     );
