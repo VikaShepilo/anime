@@ -5,6 +5,8 @@ import LoaderHomePage from './LoaderHomePage'
 export function HomePage() {
     const [isLoadingTableСharacters, setIsLoadingTableСharacters] = useState(true)
     const [characterInformation, setCharacterInformation] = useState([]) 
+    // const [characterTeam, setCharacterTeam] = useState([]) 
+    // characterTeam.length = 4
     const [searchCharacter, setSearchCharacter] = useState({
         characterName: '',
         order: "asc",
@@ -60,6 +62,7 @@ export function HomePage() {
                 onFilterCharacters={onFilterCharacters}
                 onSortCharacters={onSortCharacters}
                 onSearchName={onSearchName}
+                // setCharacterTeam={setCharacterTeam}
                 />
             }
         </div>

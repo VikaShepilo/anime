@@ -12,6 +12,30 @@
     margin: auto;
     text-align: center;
 }
+
 .inputForSearchName {
     max-width: 20%;
+}
+.cardHeader {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.headerName{
+    width: 70%;
+}
+.closedHeader {
+    color: black;
+    width: 30%;
+}
+.blockNameAndSpec {
+    
+}
+.sectorBase {
+    margin: 2rem;
+    font-size: 1.5rem;
+    text-align:start;
+}
+.blockImgName {
+    display: flex;
 }

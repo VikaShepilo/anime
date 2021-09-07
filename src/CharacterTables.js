@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Table, Radio } from 'antd'
+import { Input, Table, Radio, Button } from 'antd'
 import { UserOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.css'
 import { Link } from "react-router-dom"
@@ -38,6 +38,23 @@ const columns = [
             )
         }
     },
+    {
+        title: 'Добавить в команду',
+        dataId: 'id',
+        dataEvil: 'evil',
+        render: (dataId, dataEvil) => {
+            if (dataEvil.evil) {
+            return ( 
+                <Button type="primary" shape="round" disabled> Добавить в команду </Button>
+                )
+            }
+            if (!dataEvil.evil) {
+                return ( 
+                    <Button type="primary" shape="round"> Добавить в команду </Button>
+                )
+            }
+        }
+    },
 ]
 
 const CharacterTables = (props) => {
@@ -71,15 +88,11 @@ const CharacterTables = (props) => {
                         <Radio.Button onChange={() => {props.onFilterCharacters('true')}} value="c">На стороне зла</Radio.Button>
                     </Radio.Group>
                 </div> 
-                <Table columns={columns} 
+                <Table
+                    columns={columns} 
                     dataSource={props.characterInformation} 
                     rowKey="id" 
                     pagination={false}
-                    // onRow={(record, rowIndex) => {
-                    //     return {
-                    //         onClick: event => {},
-                    //     };
-                    //   }}
                 />
             </div>
         </div>
