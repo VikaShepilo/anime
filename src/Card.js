@@ -1,24 +1,23 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { Button } from 'antd'
-import { CloseCircleOutlined } from '@ant-design/icons'
+import { LoginOutlined } from '@ant-design/icons'
 
 const Card = (props) => {
     let charecter = props.location.propsSearch
 
     return (
         <div className="container">
+            <div className="header">
+                <Link to="/">
+                    <LoginOutlined />
+                </Link>
+            </div>
             <div className="contant">
                 <div className="contCharacterInfo">
                     <div className="cardHeader">
                         <div className="headerName">
                             Карточка персонажа
                         </div>
-                        <Link to="/">
-                            <div className="closedHeader">
-                                <CloseCircleOutlined />
-                            </div>
-                        </Link>
                     </div>
                     <div className="sectorBase">
                         <div className="blockImgName">

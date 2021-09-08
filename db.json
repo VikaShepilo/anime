@@ -6,7 +6,7 @@
       "characterName": "Наруто Узумаки",
       "technique": 90,
       "specification": "Главный герой истории, подросток-ниндзя, в теле которого его отец, жертвуя своей жизнью, заточил огромного Девятихвостого Демона-Лиса, напавшего на селение.",
-      "img": "/img/naruto.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/3/31/NarutoBorutoMovie.jpg/375px-NarutoBorutoMovie.jpg",
       "evil": false
     },
     {
@@ -14,7 +14,7 @@
       "characterName": "Саске Учиха",
       "technique": 65,
       "specification": "Один из главных персонажей, гений сильнейшего, но уничтоженного клана Учиха.",
-      "img": "/img/sasce.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/b/ba/SasukeGaiden.jpg/375px-SasukeGaiden.jpg",
       "evil": false
     },
     {
@@ -22,7 +22,7 @@
       "characterName": "Сакура Харуно",
       "technique": 12,
       "specification": "Одна из учениц академии, по уши влюбленная в Саске.",
-      "img": "/img/sacura.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/f/f0/SakuraBorutoMovie.jpg/375px-SakuraBorutoMovie.jpg",
       "evil": false
     },
     {
@@ -30,7 +30,7 @@
       "characterName": "Какаши Хатаке",
       "technique": 49,
       "specification": "Один из самых сильных ниндзя Конохи, а также учитель и наставник команды № 7.",
-      "img": "/img/kakashi.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/f/f9/Kakashi_Boruto_The_next_generation.jpg/375px-Kakashi_Boruto_The_next_generation.jpg",
       "evil": false
     },
     {
@@ -38,7 +38,7 @@
       "characterName": "Орочимару",
       "technique": 45,
       "specification": "Один из главных антагонистов сериала, змеиный ниндзя, воплощение образа безнравственного ученого.",
-      "img": "/img/orochimaru.jpg",
+      "img": "https://naruto.wiki/w/images/thumb/6/6f/Orochimaru_Naruto_Gaiden.jpg/375px-Orochimaru_Naruto_Gaiden.jpg",
       "evil": true
     },
     {
@@ -46,7 +46,7 @@
       "characterName": "Кабуто Якуши",
       "technique": 35,
       "specification": "Правая рука и шпион Орочимару.",
-      "img": "/img/kabuto.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/1/1f/YakushiKabuto.jpg/375px-YakushiKabuto.jpg",
       "evil": true
     },
     {
@@ -54,7 +54,7 @@
       "characterName": "Итачи Учиха",
       "technique": 24,
       "specification": "Гений сильнейшего, но вырезанного им же клана, Учиха.",
-      "img": "/img/itachi.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/d/d6/Itachi.jpg/375px-Itachi.jpg",
       "evil": true
       
     },
@@ -63,7 +63,7 @@
       "characterName": "Джирайя",
       "technique": 33,
       "specification": "Был одним из трех легендарных ниндзя вместе с Цунаде и Орочимару и учеником третьего Хокаге.",
-      "img": "/img/dziraia.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/6/66/Jiraiya.png/375px-Jiraiya.png.jpeg",
       "evil": false
     },
     {
@@ -71,7 +71,7 @@
       "characterName": "Хирузен Сарутоби",
       "technique": 15,
       "specification": "Третий Хокаге, предводитель деревни Скрытого Листа, бывший студент первого и второго Хокаге.",
-      "img": "/img/xiruzen.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/4/4e/Hiruzen.png/375px-Hiruzen.png.jpeg",
       "evil": false
     },
     {
@@ -79,7 +79,7 @@
       "characterName": "Цунаде",
       "technique": 17,
       "specification": "Одна из лучших ниндзя-медиков, ученица Третьего Хокаге.",
-      "img": "/img/tsunade.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/e/e1/Tsunade_1.png/375px-Tsunade_1.png.jpeg",
       "evil": false
     },
     {
@@ -87,7 +87,7 @@
       "characterName": "Хината Хьюга",
       "technique": 13,
       "specification": "Наследница клана Хьюга, единственная девушка, влюбленная в Наруто Узумаки.",
-      "img": "/img/xinata.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/d/d5/HinataLast.jpg/375px-HinataLast.jpg",
       "evil": false
     },
     {
@@ -95,7 +95,7 @@
       "characterName": "Киба Инузука",
       "technique": 9,
       "specification": "Член Команды №8, никогда не был замечен без его пожизненного компаньона, пса Акамару.",
-      "img": "/img/kiba.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/9/94/Kiba_Boruto_the_next_generation.jpg/375px-Kiba_Boruto_the_next_generation.jpg",
       "evil": false
     },
     {
@@ -103,7 +103,7 @@
       "characterName": "Шино Абураме",
       "technique": 14,
       "specification": "Член одного из сильных кланов, Абураме. Является членом команды Куренай.",
-      "img": "/img/shino.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/e/e5/Shino_Epilogue.jpg/375px-Shino_Epilogue.jpg",
       "evil": false
     },
     {
@@ -111,7 +111,7 @@
       "characterName": "Ино Яманака",
       "technique": 10,
       "specification": "Специалист по техникам, контролирующих разум противника. В составе Команды № 10 тренировалась у Асумы Сарутоби.",
-      "img": "/img/ino.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/1/1b/InoAnime.jpg/375px-InoAnime.jpg",
       "evil": false
     },
     {
@@ -119,7 +119,7 @@
       "characterName": "Чоуджи Акимичи",
       "technique": 12,
       "specification": "Член команды № 10, лучший друг Шикамару.",
-      "img": "/img/choudzi.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/1/1d/Chouji_Boruto_The_next_generation.jpg/375px-Chouji_Boruto_The_next_generation.jpg",
       "evil": false
     },
     {
@@ -127,7 +127,7 @@
       "characterName": "Шикамару Нара",
       "technique": 9,
       "specification": "Самый ленивый, но и самый умный персонаж манги и аниме Наруто. Член самого умного клана в деревне Скрытого листа, Нара.",
-      "img": "/img/shikamaru.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/a/af/ShikamaruAnime.jpg/375px-ShikamaruAnime.jpg",
       "evil": false
     },
     {
@@ -135,7 +135,7 @@
       "characterName": "Майто Гай",
       "technique": 27,
       "specification": "Один из джонинов деревни Скрытого Листа. Наставник Рок Ли, Неджи и Тен-Тен.",
-      "img": "/img/gai.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/1/1a/Might_Guy.jpg/375px-Might_Guy.jpg",
       "evil": false
     },
     {
@@ -143,7 +143,7 @@
       "characterName": "Неджи Хьюга",
       "technique": 11,
       "specification": "Гений самого старинного и выдающегося клана, Хьюга, член команды Гая.",
-      "img": "/img/nedzi.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/7/79/Neji.png/375px-Neji.png.jpeg",
       "evil": false
     },
     {
@@ -151,7 +151,7 @@
       "characterName": "Рок Ли",
       "technique": 21,
       "specification": "Один из самых трудолюбивых персонажей, техничный воин и яркая личность.",
-      "img": "/img/rok.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/0/04/Rock_lee.png/375px-Rock_lee.png.jpeg",
       "evil": false
     },
     {
@@ -159,7 +159,7 @@
       "characterName": "Темари",
       "technique": 10,
       "specification": "Старшая сестра Гаары и Канкуро, ниндзя Деревни Песка.",
-      "img": "/img/temari.jpg",
+      "img": "https://wiki.jcdn.ru/w/images/thumb/a/af/TemariBorutoMovie.jpg/375px-TemariBorutoMovie.jpg",
       "evil": false
     }
   ]

@@ -1,9 +1,8 @@
 .container {
-    background: url(../src/fonImgList.jpg);
-    background-position: left top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+.header {
+    height: 4rem;
+    background-color: #353447;
 }
 .contant { 
     min-height: 100vh;

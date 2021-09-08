@@ -60,15 +60,21 @@ const columns = [
 const CharacterTables = (props) => {
     return (
         <div className="container">
+            <div className="header">
+            <Link to="/addingСharacter"> 
+                Добавить персонажа
+            </Link>
+            <Input 
+                className="inputForSearchName"
+                type="text" 
+                value={props.searchCharacter} 
+                onChange={props.onSearchName} 
+                placeholder="поиск персонажа" 
+                prefix={<UserOutlined />}
+                />  
+            </div>
             <div className="contant">
-                <Input 
-                    className="inputForSearchName"
-                    type="text" 
-                    value={props.searchCharacter} 
-                    onChange={props.onSearchName} 
-                    placeholder="поиск персонажа" 
-                    prefix={<UserOutlined />}
-                />
+                
                 <div>
                     <Radio.Group>
                         <Radio.Button onChange={() => {props.onSortCharacters('characterName', false)}} value="a">От Я до А</Radio.Button>
