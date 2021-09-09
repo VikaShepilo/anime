@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import CharacterTables from './CharacterTables'
 import LoaderHomePage from './LoaderHomePage'
+import AddingСharacter from './AddingСharacter'
 
 export function HomePage() {
     const [isLoadingTableСharacters, setIsLoadingTableСharacters] = useState(true)
     const [characterInformation, setCharacterInformation] = useState([]) 
-    // const [characterTeam, setCharacterTeam] = useState([]) 
-    // characterTeam.length = 4
+
     const [searchCharacter, setSearchCharacter] = useState({
         characterName: '',
         order: "asc",
@@ -47,24 +47,28 @@ export function HomePage() {
         
         fetch(url)
             .then(resultArr => resultArr.json())
-            .then(
-                (resultArr) => {
+            .then((resultArr) => {
                     setCharacterInformation(resultArr)
                     setIsLoadingTableСharacters(false)
-                }
-        )}, [searchCharacter])
 
+                }
+        )
+        
+    }, [searchCharacter])
+        
     return (
         <div>
             { 
-            isLoadingTableСharacters ? <LoaderHomePage /> : <CharacterTables 
+            isLoadingTableСharacters ? <LoaderHomePage /> : (
+            <CharacterTables 
                 characterInformation={characterInformation} 
                 onFilterCharacters={onFilterCharacters}
                 onSortCharacters={onSortCharacters}
                 onSearchName={onSearchName}
-                // setCharacterTeam={setCharacterTeam}
-                />
-            }
+                /> ||
+            <AddingСharacter 
+                />     
+            )}
         </div>
     );
 }

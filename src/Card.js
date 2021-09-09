@@ -8,9 +8,20 @@ const Card = (props) => {
     return (
         <div className="container">
             <div className="header">
-                <Link to="/">
-                    <LoginOutlined />
-                </Link>
+                <div className="header-emblem">
+                    <Link to="/">
+                        <img className="imgEmblem" src="http://assets.stickpng.com/images/5852cd5c58215f0354495f67.png" alt="naruto" />
+                    </Link> 
+                </div>
+                <div className="header-button-addingСharacter">
+                </div> 
+                <div className="header-input-character"> 
+                </div>
+                <div className="header-end">
+                    <Link to="/">
+                        <LoginOutlined />
+                    </Link> 
+                </div>
             </div>
             <div className="contant">
                 <div className="contCharacterInfo">

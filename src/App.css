@@ -1,8 +1,40 @@
 .container {
+    background-image: url("https://kartinkin.com/uploads/posts/2021-07/thumbs/1626765362_27-kartinkin-com-p-nebo-anime-naruto-anime-krasivo-30.jpg");
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .header {
     height: 4rem;
     background-color: #353447;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.header-emblem {
+    width: 10%;
+}
+.imgEmblem {
+    max-width: 6rem;
+}
+.header-button-addingСharacter {
+    width: 10%;
+}
+
+.header-input-character {
+    width: 40%;
+    margin: 0 10%;
+}
+.inputForSearchName {
+    width: 200px;
+}
+.header-end {
+    width: 10%;   
+}
+.header-blok-end {
+
 }
 .contant { 
     min-height: 100vh;
@@ -11,9 +43,9 @@
     margin: auto;
     text-align: center;
 }
-
-.inputForSearchName {
-    max-width: 20%;
+.form {
+    display: flex;
+    padding: 2% 8%;
 }
 .cardHeader {
     font-size: 2rem;
@@ -37,4 +69,8 @@
 }
 .blockImgName {
     display: flex;
+}
+.battle {
+    height: 4rem;
+    background-color:#eec098;
 }

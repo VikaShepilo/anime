@@ -1,77 +1,118 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Input, Table, Radio, Button } from 'antd'
-import { UserOutlined } from '@ant-design/icons'
+import { UserOutlined, CloseCircleOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.css'
 import { Link } from "react-router-dom"
 
-const columns = [
-    {
-        title: 'Персонаж',
-        dataIndex: "img",
-        render: theImageURL => <img alt={theImageURL} src={theImageURL} />,
-    },
-    {
-        title: 'Имя',
-        dataIndex: 'characterName',
-        dataId: 'id',
-        render: (dataIndex, dataId) => {
-            return (
-              <Link to={{
-                pathname: "/card",
-                propsSearch: {dataId}
-            }}> {dataIndex}
-              </Link>
-            )
-        }
-    },
-    {
-        title: 'Количество изученных техник',
-        dataIndex: 'technique',
-        dataId: 'id',
-        render: (dataIndex, dataId) => {
-            return (
-              <Link to={{
-                pathname: "/card",
-                propsSearch: {dataId}
-            }}> {dataIndex}
-              </Link>
-            )
-        }
-    },
-    {
-        title: 'Добавить в команду',
-        dataId: 'id',
-        dataEvil: 'evil',
-        render: (dataId, dataEvil) => {
-            if (dataEvil.evil) {
-            return ( 
-                <Button type="primary" shape="round" disabled> Добавить в команду </Button>
-                )
-            }
-            if (!dataEvil.evil) {
-                return ( 
-                    <Button type="primary" shape="round"> Добавить в команду </Button>
-                )
-            }
-        }
-    },
-]
 
 const CharacterTables = (props) => {
+    const [characterTim, setCharacterTim] = useState({
+        1: "",
+        2: "",
+        3: ""
+    })
+    
+    const addCharacterInTima = (dataId) => {
+        if (characterTim[1] === "") {
+            setCharacterTim(characterTim => ({
+                ...characterTim,
+                1: dataId
+            }))
+        }else if (characterTim[2] === "") {
+            setCharacterTim(characterTim => ({
+                ...characterTim,
+                2: dataId
+            }))
+        }else if (characterTim[3] === "") {
+            setCharacterTim(characterTim => ({
+                ...characterTim,
+                3: dataId
+            }))
+        }
+        console.log(characterTim)
+    }
+
+    const columns = [
+        {
+            title: 'Персонаж',
+            dataIndex: "img",
+            render: theImageURL => <img alt={theImageURL} src={theImageURL} />,
+        },
+        {
+            title: 'Имя',
+            dataIndex: 'characterName',
+            dataId: 'id',
+            render: (dataIndex, dataId) => {
+                return (
+                  <Link to={{
+                    pathname: "/card",
+                    propsSearch: {dataId}
+                }}> {dataIndex}
+                  </Link>
+                )
+            }
+        },
+        {
+            title: 'Количество изученных техник',
+            dataIndex: 'technique',
+            dataId: 'id',
+            render: (dataIndex, dataId) => {
+                return (
+                  <Link to={{
+                    pathname: "/card",
+                    propsSearch: {dataId}
+                }}> {dataIndex}
+                  </Link>
+                )
+            }
+        },
+        {
+            title: 'Добавить в команду',
+            dataId: 'id',
+            dataEvil: 'evil',
+            render: (dataId, dataEvil) => {
+                if (dataEvil.evil) {
+                return ( 
+                    <Button type="primary" shape="round" disabled> Добавить в команду </Button>
+                    )
+                }
+                if (!dataEvil.evil) {
+                    return ( 
+                        <Button shape="round" onClick={(e) => {addCharacterInTima(dataId)}}> Добавить в команду </Button>
+                    )
+                }
+            }
+        },
+    ]
+
     return (
         <div className="container">
             <div className="header">
-            <Link to="/addingСharacter"> 
-                Добавить персонажа
-            </Link>
-            <Input 
-                className="inputForSearchName"
-                type="text" 
-                value={props.searchCharacter} 
-                onChange={props.onSearchName} 
-                placeholder="поиск персонажа" 
-                prefix={<UserOutlined />}
-                />  
+                <div className="header-emblem">
+                    <Link to="/">
+                        <img className="imgEmblem" src="http://assets.stickpng.com/images/5852cd5c58215f0354495f67.png" alt="naruto" />
+                    </Link> 
+                </div>
+                <div className="header-button-addingСharacter">
+                    <Link to="/addingСharacter">
+                        <Button>Добавить персонажа</Button>
+                    </Link>
+                </div> 
+                <div className="header-input-character">
+                    <Input 
+                        className="inputForSearchName"
+                        type="text" 
+                        value={props.searchCharacter} 
+                        onChange={props.onSearchName} 
+                        placeholder="поиск персонажа" 
+                        prefix={<UserOutlined />}
+                        />  
+                </div>
+                <div className="header-end">
+                    <Link to="/">
+                        <CloseCircleOutlined className="header-blok-end" />
+                    </Link> 
+                </div>
             </div>
             <div className="contant">
                 
@@ -101,8 +142,11 @@ const CharacterTables = (props) => {
                     pagination={false}
                 />
             </div>
+            <div className="battle">
+            </div>
         </div>
-    );
+        
+    )
 }
 
 export default CharacterTables
