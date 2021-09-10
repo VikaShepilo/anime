@@ -2,8 +2,8 @@
 
 import './App.css'
 import { HomePage } from './HomePage'
-import Card from './Card'
-import AddingСharacter from './AddingСharacter'
+import Card from './components/Card'
+import AddingСharacter from './components/AddingСharacter'
 import {
   BrowserRouter as Router,
   Switch,

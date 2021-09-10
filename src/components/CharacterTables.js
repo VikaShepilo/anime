@@ -90,7 +90,7 @@ const CharacterTables = (props) => {
             <div className="header">
                 <div className="header-emblem">
                     <Link to="/">
-                        <img className="imgEmblem" src="http://assets.stickpng.com/images/5852cd5c58215f0354495f67.png" alt="naruto" />
+                        <img className="imgEmblem" src="https://wiki.jcdn.ru/w/images/thumb/7/7a/Naruto_anime_logo.png/450px-Naruto_anime_logo.png" alt="naruto" />
                     </Link> 
                 </div>
                 <div className="header-button-addingСharacter">

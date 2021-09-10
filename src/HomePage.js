@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import CharacterTables from './CharacterTables'
-import LoaderHomePage from './LoaderHomePage'
-import AddingСharacter from './AddingСharacter'
+import CharacterTables from './components/CharacterTables'
+import LoaderHomePage from './components/LoaderHomePage'
+import AddingСharacter from './components/AddingСharacter'
 
 export function HomePage() {
     const [isLoadingTableСharacters, setIsLoadingTableСharacters] = useState(true)
