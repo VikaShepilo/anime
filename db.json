@@ -159,14 +159,6 @@
       "specification": "Старшая сестра Гаары и Канкуро, ниндзя Деревни Песка.",
       "img": "https://wiki.jcdn.ru/w/images/thumb/a/af/TemariBorutoMovie.jpg/375px-TemariBorutoMovie.jpg",
       "evil": false
-    },
-    {
-      "characterName": "Вика",
-      "technique": 7,
-      "specification": "Живет в Минске",
-      "img": "https://wiki.jcdn.ru/w/images/thumb/d/d9/Erimaki.jpg/375px-Erimaki.jpg",
-      "evil": "true",
-      "id": 21
     }
   ]
 }

@@ -1,28 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
 import { Input, Button, InputNumber, Select } from 'antd'
 import { LoginOutlined } from '@ant-design/icons'
-
+import { addCharacter } from '../store/actions/actions'
+import { useSelector, useDispatch } from 'react-redux'
 const { TextArea } = Input
 const { Option } = Select
 
 const AddingСharacter = (props) => {
-    const [characterName, setCharacterName] = useState('') 
-    const [technique, setTechnique] = useState('')
-    const [specification, setSpecification] = useState('')
-    const [img, setImg] = useState('')
-    const [evil, setEvil] = useState('')
+    const newCharacters = useSelector((state) => state.newCharacter.newCharacter)
+    const dispatch = useDispatch()
 
-    const sendCharacters = (e) => {
-         const block = {characterName, technique, specification, img, evil}
-         console.log(block)
+    const sendCharacters = () => {
          fetch('http://localhost:3000/characters', {
              method: "POST",
              headers: { "Content-Type": "application/json" },
-             body: JSON.stringify(block)
+             body: JSON.stringify(newCharacters)
          })
             .then((resultArr) => {
-                console.log(resultArr)
+                dispatch(addCharacter({
+                    'characterName': null,
+                    'technique': null,
+                    'specification': null,
+                    'img': null,
+                    'evil': false,
+                }))
             })
     }  
 
@@ -50,41 +52,71 @@ const AddingСharacter = (props) => {
                     Имя персонажа: 
                     <Input 
                         type="text" 
-                        value={characterName} 
-                        onChange={(e) => { setCharacterName(e.target.value)}} 
+                        value={newCharacters['characterName']} 
+                        onChange={(e) => {dispatch(addCharacter({
+                            'characterName': e.target.value,
+                            'technique': newCharacters['technique'],
+                            'specification': newCharacters['specification'],
+                            'img': newCharacters['img'],
+                            'evil': newCharacters['evil'],
+                        }))}} 
                         placeholder="имя персонажа" />
                 </div>
                 <div className="form">
                     Количество техник изученных персонажем:
                     <InputNumber min={1} max={100} 
                         defaultValue={0} 
-                        value={technique} 
-                        onChange={setTechnique} />
+                        value={newCharacters['technique']} 
+                        onChange={(value) => dispatch(addCharacter({
+                            'characterName': newCharacters['characterName'],
+                            'technique': value,
+                            'specification': newCharacters['specification'],
+                            'img': newCharacters['img'],
+                            'evil': newCharacters['evil'],
+                        }))} />
                 </div>
                 <div className="form">
                     Описание персонажа:
                     <TextArea rows={4} 
-                        value={specification} 
-                        onChange={(e) => { setSpecification(e.target.value)}}/>
+                        value={newCharacters['specification']} 
+                        onChange={(e) => {dispatch(addCharacter({
+                            'characterName': newCharacters['characterName'],
+                            'technique': newCharacters['technique'],
+                            'specification': e.target.value,
+                            'img': newCharacters['img'],
+                            'evil': newCharacters['evil'],
+                        }))}}/>
                 </div>
                 <div className="form">
                     Вставьте URL изображения персонажа:
                     <Input 
                         type="text" 
-                        value={img} 
-                        onChange={(e) => { setImg(e.target.value)}} 
+                        value={newCharacters['img']} 
+                        onChange={(e) => {dispatch(addCharacter({
+                            'characterName': newCharacters['characterName'],
+                            'technique': newCharacters['technique'],
+                            'specification': newCharacters['specification'],
+                            'img': e.target.value,
+                            'evil': newCharacters['evil'],
+                        }))}} 
                         placeholder="https://..." />
                 </div>
                 <div className="form">
                     Персонаж будет:
                     <Select style={{ width: 250 }} 
-                        value={evil} 
-                        onSelect={(value, event) => setEvil(value)}>
-                            <Option value="true">на стороне зла</Option>
-                            <Option value="false">на стороне добра</Option>
+                        value={newCharacters['evil']} 
+                        onSelect={(value, event) => {dispatch(addCharacter({
+                            'characterName': newCharacters['characterName'],
+                            'technique': newCharacters['technique'],
+                            'specification': newCharacters['specification'],
+                            'img': newCharacters['img'],
+                            'evil': value,
+                        }))}}>
+                            <Option value={false}>на стороне добра</Option>
+                            <Option value={true}>на стороне зла</Option>
                     </Select>
-                </div>
-                <Button type="primary" shape="round" onClick={() => {sendCharacters()}}> Добавить в команду </Button>
+                </div> 
+                <Button type="primary" shape="round" onClick={() => {sendCharacters()}}> Добавить персонажа </Button>
             </div>
         </div>
     )

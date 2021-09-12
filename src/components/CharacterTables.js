@@ -1,35 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Input, Table, Radio, Button } from 'antd'
 import { UserOutlined, CloseCircleOutlined } from '@ant-design/icons'
 import 'antd/dist/antd.css'
 import { Link } from "react-router-dom"
-
+import { addCharactersTim } from '../store/actions/actions'
+import { useSelector, useDispatch } from 'react-redux'
 
 const CharacterTables = (props) => {
-    const [characterTim, setCharacterTim] = useState({
-        1: "",
-        2: "",
-        3: ""
-    })
+    const tim = useSelector((state) => state.tim.tim)
+    const characters = useSelector((state) => state.allCharacters.characters)
+    const searchCharacter = useSelector((state) => state.filterCharacters.filterCharacters)
+    const dispatch = useDispatch()
     
     const addCharacterInTima = (dataId) => {
-        if (characterTim[1] === "") {
-            setCharacterTim(characterTim => ({
-                ...characterTim,
-                1: dataId
+        if (tim[1] === "") {
+            dispatch(addCharactersTim({
+                1: dataId,
+                2: "",
+                3: "",
             }))
-        }else if (characterTim[2] === "") {
-            setCharacterTim(characterTim => ({
-                ...characterTim,
-                2: dataId
+        } else if (tim[2] === "") {
+            dispatch(addCharactersTim({
+                1: tim[1],
+                2: dataId,
+                3: "",
             }))
-        }else if (characterTim[3] === "") {
-            setCharacterTim(characterTim => ({
-                ...characterTim,
-                3: dataId
+        } else if (tim[3] === "") {
+            dispatch(addCharactersTim({
+                1: tim[1],
+                2: tim[2],
+                3: dataId,
             }))
         }
-        console.log(characterTim)
+        console.log(tim)
     }
 
     const columns = [
@@ -45,7 +48,7 @@ const CharacterTables = (props) => {
             render: (dataIndex, dataId) => {
                 return (
                   <Link to={{
-                    pathname: "/card",
+                    pathname: `/card`,
                     propsSearch: {dataId}
                 }}> {dataIndex}
                   </Link>
@@ -59,7 +62,7 @@ const CharacterTables = (props) => {
             render: (dataIndex, dataId) => {
                 return (
                   <Link to={{
-                    pathname: "/card",
+                    pathname: `/card`,
                     propsSearch: {dataId}
                 }}> {dataIndex}
                   </Link>
@@ -102,7 +105,7 @@ const CharacterTables = (props) => {
                     <Input 
                         className="inputForSearchName"
                         type="text" 
-                        value={props.searchCharacter} 
+                        value={searchCharacter['characterName']} 
                         onChange={props.onSearchName} 
                         placeholder="поиск персонажа" 
                         prefix={<UserOutlined />}
@@ -130,19 +133,22 @@ const CharacterTables = (props) => {
                 </div> 
                 <div>  
                     <Radio.Group defaultValue="a">
-                        <Radio.Button onChange={() => {props.onFilterCharacters('true||false')}} value="a">Все персонажи</Radio.Button>
-                        <Radio.Button onChange={() => {props.onFilterCharacters('false')}} value="b">На стороне добра</Radio.Button>
-                        <Radio.Button onChange={() => {props.onFilterCharacters('true')}} value="c">На стороне зла</Radio.Button>
+                        <Radio.Button onChange={() => {props.onFilterCharacters('')}} value="a">Все персонажи</Radio.Button>
+                        <Radio.Button onChange={() => {props.onFilterCharacters(false)}} value="b">На стороне добра</Radio.Button>
+                        <Radio.Button onChange={() => {props.onFilterCharacters(true)}} value="c">На стороне зла</Radio.Button>
                     </Radio.Group>
                 </div> 
                 <Table
                     columns={columns} 
-                    dataSource={props.characterInformation} 
+                    dataSource={characters} 
                     rowKey="id" 
                     pagination={false}
                 />
             </div>
             <div className="battle">
+                <Link to="/fixСharacter">
+                    <Button>Redux</Button>
+                </Link>
             </div>
         </div>
         
