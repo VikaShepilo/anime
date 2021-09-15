@@ -15,6 +15,7 @@ export function HomePage() {
     const nameCharacter = useSelector((state) => state.filterCharacters.filterCharacters.characterName)
     console.log(searchCharacter)
 
+
     const onSortCharacters = (sortKey, element) => {
         dispatch(sortCharacters({
             ...searchCharacter,
@@ -25,13 +26,10 @@ export function HomePage() {
         })) 
     }
 
-    const onFilterCharacters = element => {
+    const onFilterCharacters = filter => {
         dispatch(sortCharacters({
-            // ...searchCharacter,
-            'characterName': nameCharacter,
-            'filter': element,
-            'sort': sort,
-            'order': order
+            ...searchCharacter,
+            filter
         }))
     }
     
@@ -39,9 +37,6 @@ export function HomePage() {
         dispatch(sortCharacters({
             ...searchCharacter,
             'characterName': element.target.value,
-            'filter': filter,
-            'sort': sort,
-            'order': order
         }))
     }
 

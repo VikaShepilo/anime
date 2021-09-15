@@ -1,52 +1,154 @@
 .container {
-    background-image: url("https://kartinkin.com/uploads/posts/2021-07/thumbs/1626765362_27-kartinkin-com-p-nebo-anime-naruto-anime-krasivo-30.jpg");
-    background-position: left top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-size: 24px;
+    background-color: rgb(233, 233, 233);
 }
-.header {
-    height: 4rem;
-    background-color: #353447;
+.header-white {
+    background-color: #fff;
+    height: 8rem;
+    padding: 2em 10rem;
     display: flex;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content: space-between;
 }
-.header-emblem {
-    width: 10%;
+
+.ant-btn-dangerous.ant-btn-primary {
+    height: 3rem;
+    width: 12rem;
+    font-size: 24px;
+
+}
+.button-battle {
+    font-size: 24px !important;
+    color: white !important;
+}
+.button-battle:hover {
+    color: rgb(182, 182, 182) !important;
+}
+.header-black {
+    height: 6rem;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 10rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .imgEmblem {
-    max-width: 6rem;
+    max-width: 8rem;
 }
-.header-button-addingСharacter {
-    width: 10%;
-}
-
-.header-input-character {
+.header-menu {
     width: 40%;
-    margin: 0 10%;
+    display: flex;
+    justify-content: space-evenly;
 }
-.inputForSearchName {
-    width: 200px;
+.menu-item {
+    padding-right: 1rem;
+    color: #fff;
+    transition: 1s linear;
 }
-.header-end {
-    width: 10%;   
+.menu-item:hover {
+    color: rgb(182, 182, 182);
 }
-.header-blok-end {
-
+.header-input {
+    width: 30%;
+}
+.ant-input-affix-wrapper {
+    height: 4rem;
+    border-color:black !important;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: red !important;
 }
 .contant { 
     min-height: 100vh;
-    max-width: 50%;
+    max-width: 70%;
     background-color: white;
     margin: auto;
     text-align: center;
 }
-.form {
+.all-radio-group {
+    padding: 2rem 0;
     display: flex;
-    padding: 2% 8%;
+    justify-content: space-around;
 }
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: red !important;
+    border-color: red !important;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+    background-color: red !important;
+}
+span {
+    font-size: 16px;
+    color: black !important;
+    transition: all .5s ease;
+}
+span:hover {
+    color: red !important;
+    transition: all .5s ease;
+}
+
+a {
+    color: black !important;
+}
+.ant-table table {
+    width: 100%;
+    font-size: 24px !important;
+}
+.button-table-add-character {
+    font-size: 24px !important;
+}
+.ant-btn:hover, .ant-btn:focus {
+    color: red !important;
+    border-color: red !important;
+}
+.ant-table-row-level-0 {
+    background-color: rgba(255, 255, 255, 0.466);
+}
+.ant-btn-round {
+    height: 3rem !important;
+}
+
+.character-card {
+    width: 300px;
+    margin: 3rem auto;
+    padding: 10px 10px 5px 10px;
+    border: 1px solid #eee;
+    background: white;
+    font-family: "Open Sans";
+    overflow: hidden;
+    transition: .4s linear;
+ }
+ .character-card-img {
+    transition: 1s ease-in-out;
+ }
+ .character-card-img:hover {
+    transform: scale(1.1);
+ }
+ .character-card-img img {
+    display: block;
+    width: 100%;
+ }
+ .character-card-list {
+    margin-top: 15px;
+ }
+ .character-card-list h3 {
+    font-weight: 700;
+    color: #39404B;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 2;
+ }
+ .character-card-del {
+    color: #E34D38;
+    display: block;
+    margin-bottom: 12px;
+ }
+
 .cardHeader {
     font-size: 2rem;
     display: flex;
@@ -59,9 +161,7 @@
     color: black;
     width: 30%;
 }
-.blockNameAndSpec {
-    
-}
+
 .sectorBase {
     margin: 2rem;
     font-size: 1.5rem;
@@ -70,7 +170,92 @@
 .blockImgName {
     display: flex;
 }
-.battle {
-    height: 4rem;
-    background-color:#eec098;
+
+.blockMyTeam {
+    display: flex;
+    justify-content:space-evenly;
 }
+.air {
+    max-width: 70%;
+    margin: 0 auto 0;
+    padding: 3rem;
+    background: #E4E3DF;
+}
+.form-inner {
+    border: 2px solid #909090;
+    border-bottom: none;
+}
+.stripes-block {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: repeating-linear-gradient(-45deg, #E4E3DF, #E4E3DF 5px, #909090 6px, #909090 8px);
+    border-bottom: 2px solid #909090;
+}
+.stripes-block:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    margin-left: -6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fffffe;
+    box-shadow: 0 0 0 1px #090606, 0 0 0 12px #9c8778;
+}
+.form-row {
+    position: relative;
+    padding: 10px;
+    border-bottom: 2px solid #909090;
+}
+.form-row label {
+    display: block;
+}
+.form-row input {
+    display: block;
+    width: 100%;
+    padding: 0;
+    line-height: 30px;
+    border-width: 0;
+    background: #E4E3DF;
+}
+.form-row textarea {
+    width: 100%;
+    margin-bottom:40px;
+    padding: 0;
+    outline: 0;
+    line-height: 40px;
+    background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
+    background-size: 8px 40px;
+    letter-spacing: 0.2em;
+    background-attachment: local;
+    background-repeat: repeat;
+    border-width: 0;
+    resize: none;
+}
+.form-row-icon {
+    position: relative;
+    border-bottom: 2px solid #909090;
+}
+
+.form-row-icon input {
+    display: block;
+    width: 100%;
+    padding: 0 10px 0 50px;
+    line-height: 40px;
+    box-sizing: border-box;
+    border-width: 0;
+    background: #E4E3DF;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: #E4E3DF !important;
+}
+.form-row-icon {
+    border-bottom-color: #909090;
+    cursor: pointer;
+}
+.form-row-icon input[type="submit"] {
+    cursor: pointer;
+}
+

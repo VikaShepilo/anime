@@ -34,3 +34,10 @@ export const sortCharacters = (filterCharacters) => {
         payload: filterCharacters,
     }
 }
+
+export const selectEnemy = (enemyCharacter) => {
+    return {
+        type:ActionTypes.ENEMY_CHARACTER,
+        payload: enemyCharacter,
+    }
+}

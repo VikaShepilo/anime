@@ -1,18 +1,16 @@
 //import logo from './logo.svg';
-
 import './App.css'
 import { HomePage } from './HomePage'
 import Card from './components/Card'
 import AddingСharacter from './components/AddingСharacter'
-import FixСharacter from './components/FixСharacte'
+import Battle from './components/Battle'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom"
 import { Provider } from 'react-redux'
-import store from './store/store'
-
+import { store } from './store'
 
 function App() {
   return (
@@ -23,7 +21,7 @@ function App() {
             <Route exact path="/" component={HomePage}></Route>
             <Route exact path="/card" component={Card}></Route>
             <Route exact path="/addingСharacter" component={AddingСharacter}></Route>
-            <Route exact path="/fixСharacter" component={FixСharacter}></Route>
+            <Route exact path="/battle" component={Battle}></Route>
           </Switch>
         </Router>
       </Provider>

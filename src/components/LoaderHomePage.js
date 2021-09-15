@@ -3,15 +3,15 @@ import React from 'react'
 const LoaderHomePage = () => {
     return (
         <div className="container">
-            <div className="header">
-                <div className="header-emblem">
-                    <img className="imgEmblem" src="https://wiki.jcdn.ru/w/images/thumb/7/7a/Naruto_anime_logo.png/450px-Naruto_anime_logo.png" alt="naruto" />
+            <div className="header-white">
+                
+            </div>
+            <div className="header-black">
+                <div className="header-menu">
+                    
                 </div>
-                <div className="header-button-addingСharacter">
-                </div> 
-                <div className="header-input-character"> 
-                </div>
-                <div className="header-end"> 
+                <div className="header-input">
+
                 </div>
             </div>
             <div className="contant">
